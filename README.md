@@ -97,5 +97,5 @@ app.on("activate", () => {
 
     > electron .
 
--   Launch the app by the command
+-   __Launch__ the app by the command
     > yarn start
