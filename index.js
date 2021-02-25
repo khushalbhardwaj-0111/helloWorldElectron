@@ -12,7 +12,7 @@ function createWindow() {
 		}
 	})
 
-	win.loadFile("index.html");
+	win.loadFile("public/index.html");
 }
 
 // create a new BrowserWindow when electron app is initialzed.
