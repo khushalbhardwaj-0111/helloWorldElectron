@@ -1,6 +1,6 @@
 # Electron.js Notes
 
-## How does Electorn Work?
+## How does Electron Work?
 
 -   Electron uses Chromium, NodeJS and Custom APIs
 -   Custom APIs for working with often-needed OS native functions.
@@ -9,7 +9,7 @@
 
 -   There is a main process that you can say the main window of the app.
 
--   And the borwser tabs can said a **Child Process** or **Renderer Processes** that shows a **Webpage**
+-   And the browser tabs can said a **Child Process** or **Renderer Processes** that shows a **Webpage**
 
 -   the tabs _communicate_ with the other tab and the main app with an **Inter Process Communication Modules**
 
@@ -23,19 +23,19 @@
 
 ### Electron similar to WEB DEV
 
--   Electron can be comapred with WEB Dev as we develop the body in the web dev in Electron that body extends to the **whole dektop window**
+-   Electron can be compared with WEB Dev as we develop the body in the web dev in Electron that body extends to the **whole desktop window**
 
 ### History of Electron(Key towards learning it)
 
 -   Made by **Github** to create **Atom** text editor.
 -   Atom was created on electron because JavaScript is used more prominently and an Text-Editor based on JS can be easily extensible by other developers in open Source.
 
--   Compaines using Electron are **VSCode**, **Slack**, **Discord**.
+-   Companies using Electron are **VSCode**, **Slack**, **Discord**.
 
 ## Hello World
 
 -   Create a new directory.
--   **Initialze node** in the dir by
+-   **Initialize node** in the dir by
 
     > npm init
 
@@ -47,7 +47,7 @@
 
 -   Create an **index.js**, **index.html** file.
 
--   In the index.js wirte the following code
+-   In the index.js write the following code
 <!-- prettier-ignore-start -->
 
 ```
@@ -56,7 +56,7 @@
 
 const { app, BrowserWindow } = require("electron");
 
-// nodeIntegrations prefernces allow the app to acess all the node API.
+// nodeIntegrations preferences allow the app to access all the node API.
 function createWindow() {
     const win = new BrowserWindow({
     width: 800,
@@ -69,7 +69,7 @@ function createWindow() {
     win.loadFile("public/index.html");
 }
 
-// create a new BrowserWindow when electron app is initialzed.
+// create a new BrowserWindow when electron app is initialized.
 app.whenReady().then(createWindow);
 
 // quits the app if there are no longer any windows.
@@ -97,5 +97,5 @@ app.on("activate", () => {
 
     > electron .
 
--   __Launch__ the app by the command
+-   **Launch** the app by the command
     > yarn start
