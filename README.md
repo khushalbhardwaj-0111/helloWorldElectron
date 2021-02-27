@@ -3,6 +3,7 @@
 ## How does Electron Work?
 
 -   Electron uses Chromium, NodeJS and Custom APIs
+-   An Electron window can make use of simple nodeJS module system without any module bundler but chrome can't.
 -   Custom APIs for working with often-needed OS native functions.
 
 ### How Chrome Works?
@@ -119,3 +120,12 @@ app.on("activate", () => {
 -   Electron app **creates** a main window or the **App window**.
 
 -   Inside the main window our **html** file is **rendered** just like in a web browser.
+
+## Convention for logic
+
+- _Electron App_ - Electron specific configuration and logic.
+- _WEB App_ - Keep as generic as possible to increase __posible reuse on plain web__.
+
+## Comunicating Electron App to the WEB App
+
+- To communicate b/w different running processes in our Electron App we use __Inter Process Communication(IPC) System__.
