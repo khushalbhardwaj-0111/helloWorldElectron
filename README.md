@@ -124,8 +124,8 @@ app.on("activate", () => {
 ## Convention for logic
 
 - _Electron App_ - Electron specific configuration and logic.
-- _WEB App_ - Keep as generic as possible to increase __posible reuse on plain web__.
+- _WEB App_ - Keep as generic as possible to increase __possible reuse on plain web__.
 
-## Comunicating Electron App to the WEB App
+## Communicating Electron App to the WEB App
 
 - To communicate b/w different running processes in our Electron App we use __Inter Process Communication(IPC) System__.
