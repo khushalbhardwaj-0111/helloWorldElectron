@@ -3,6 +3,7 @@
 ## How does Electron Work?
 
 -   Electron uses Chromium, NodeJS and Custom APIs
+-   An Electron window can make use of simple nodeJS module system without any module bundler but chrome can't.
 -   Custom APIs for working with often-needed OS native functions.
 
 ### How Chrome Works?
@@ -89,6 +90,18 @@ app.on("activate", () => {
 
 <!-- prettier-ignore-end -->
 
+-   In place of loadFile method we can use loadURL to load or display a specific path down there, for example to show [Google](https://www.google.com)
+
+    ```
+    win.loadURL("https://www.google.com/");
+    ```
+
+-   NOTE: in place of win.loadFile(filepath) we can use the file Protocol as
+
+    ```
+    win.loadURL(`file://${path.join(__dirname, filePath)}`);
+    ```
+
 -   In the index.html file create a boiler plate html file that you want to render.
 
 -   In the _package.json_ file **App Name** and **Author** must be there.
@@ -99,3 +112,20 @@ app.on("activate", () => {
 
 -   **Launch** the app by the command
     > yarn start
+
+## Architecture of Electron.js
+
+-   **Electron App** is the one that **runs in the terminal** or you can say it as the server of our application.
+
+-   Electron app **creates** a main window or the **App window**.
+
+-   Inside the main window our **html** file is **rendered** just like in a web browser.
+
+## Convention for logic
+
+- _Electron App_ - Electron specific configuration and logic.
+- _WEB App_ - Keep as generic as possible to increase __posible reuse on plain web__.
+
+## Comunicating Electron App to the WEB App
+
+- To communicate b/w different running processes in our Electron App we use __Inter Process Communication(IPC) System__.
